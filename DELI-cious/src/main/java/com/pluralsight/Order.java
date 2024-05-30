@@ -14,11 +14,14 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
-                "sandwiches=" + sandwiches +
-                ", chips=" + chips +
-                ", drinks=" + drinks +
-                '}';
+        return ("----Order Details----\n" +
+                "----Sandwiches----\n" +
+                "%s\n" +
+                "----Drinks----\n" +
+                "%s\n----Chips----\n" +
+                "%s\n" +
+                "Order Total : $%.2f")
+                .formatted(sandwiches, drinks, chips, getTotal());
     }
 
     public ArrayList<Sandwich> getSandwiches() {

@@ -28,17 +28,19 @@ public class Sandwich {
 
     @Override
     public String toString() {
-        return "Sandwich{" +
-                "size='" + size + '\'' +
-                ", bread='" + bread + '\'' +
-                ", sauces=" + sauces +
-                ", toppings=" + toppings +
-                ", isToasted=" + isToasted +
-                ", meat='" + meat + '\'' +
-                ", cheese='" + cheese + '\'' +
-                ", extraMeat=" + extraMeat +
-                ", extraCheese=" + extraCheese +
-                '}';
+        return ("""
+                size          %s
+                meat          %s
+                extraMeat     %s
+                cheese        %s
+                extraCheese   %s
+                bread         %s
+                sauces        %s
+                toppings      %s
+                toasted       %s
+                price         $%.2f
+                """)
+                .formatted(size, meat, extraMeat, cheese, extraCheese, bread, sauces, toppings, isToasted, getPrice());
     }
     // my getters and setters
     public String getMeat() {
