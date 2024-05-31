@@ -1,0 +1,11 @@
+----Order Details----
+----Sandwiches----
+[]
+----Drinks----
+[size	Large
+flavor	Berry slush
+price	$3.00]
+----Chips----
+[type	Sour Cream & Onion
+price	$1.50]
+Order Total : $4.50

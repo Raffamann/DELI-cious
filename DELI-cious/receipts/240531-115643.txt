@@ -1,0 +1,18 @@
+----Order Details----
+----Sandwiches----
+[size          4"
+meat          Steak
+extraMeat     false
+cheese        American
+extraCheese   false
+bread         White
+sauces        [Mayo]
+toppings      [Lettuce]
+toasted       true
+price         $7.25
+]
+----Drinks----
+[]
+----Chips----
+[]
+Order Total : $7.25
