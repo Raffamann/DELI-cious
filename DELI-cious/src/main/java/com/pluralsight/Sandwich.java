@@ -26,6 +26,9 @@ public class Sandwich {
         this.toppings = new ArrayList<>();
     }
 
+    public Sandwich(String size, String meat, String cheese, boolean extraMeat, boolean extraCheese, String bread, boolean isToasted) {
+    }
+
     @Override
     public String toString() {
         return ("""
