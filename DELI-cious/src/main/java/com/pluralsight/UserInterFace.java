@@ -1,13 +1,15 @@
 package com.pluralsight;
 import java.util.*;
-public class UserInterface {
+public class UserInterFace {
     static Scanner scanner = new Scanner(System.in);
 
     static Order order = new Order();
 
-    public UserInterface() {}
 
-    public void homeScreen() {
+    public UserInterFace() {
+    }
+
+     public void homeScreen() {
         System.out.println("""
                 Hello! Welcome to the DELI-cious Deli!!
                 ---------------------------------------
@@ -73,6 +75,7 @@ public class UserInterface {
         System.out.println("Please select a size");
         String size = sizeSelection();
 
+
         // options for a specific bread type
 
         System.out.println("------------");
@@ -89,6 +92,7 @@ public class UserInterface {
         if (!meat.equalsIgnoreCase("none")) {
             extraMeat = extraToppings(meat);
         }
+
 
         //options for cheeses
 
@@ -115,6 +119,13 @@ public class UserInterface {
         boolean isToasted = toasted == 1;
         Sandwich sandwich;
         sandwich = new Sandwich(size, meat, cheese ,extraMeat,extraCheese, bread, isToasted);
+        sandwich.setSize(size);
+        sandwich.setMeat(meat);
+        sandwich.setCheese(cheese);
+        sandwich.setExtraMeat(extraMeat);
+        sandwich.setExtraCheese(extraCheese);
+        sandwich.setBread(bread);
+        sandwich.setToasted(isToasted);
         sandwich.setSauces(sauces);
         sandwich.setToppings(toppings);
         order.getSandwiches().add(sandwich);
@@ -131,9 +142,9 @@ public class UserInterface {
         int opt = scanner.nextInt();
         String size = "";
         switch (opt) {
-            case 1 -> size = "4 ";
-            case 2 -> size = "8";
-            case 3 -> size = "12";
+            case 1 -> size = "4\"";
+            case 2 -> size = "8\"";
+            case 3 -> size = "12\"";
             default -> {
                 System.out.println("Oops that's not a valid option");
                 sizeSelection();
